@@ -60,17 +60,27 @@ class Tab extends Component {
         }
       ]
     }
+
+    this.clkEvent = this.clkEvent.bind(this)
+  }
+  clkEvent () {
+    console.log('111')
   }
   render () {
     return (
-      <div className='menus'>
-        { this.state.data.map((el, index) => {
-          return (
-            <div className='menu' key={index}>
-              <button>{el.tabName}</button>
-            </div>
-          )
-        })}
+      <div>
+        <div className='menus'>
+          { this.state.data.map((el, index) => {
+            return (
+              <div className='menu' key={index}>
+                <button onClick={this.clkEvent}>{el.tabName}</button>
+              </div>
+            )
+          })}
+        </div>
+        <div>
+            11111
+        </div>
       </div>
     )
   }
