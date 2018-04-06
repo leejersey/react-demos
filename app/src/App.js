@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
 
-// import Accordion from './Accordion.js'
-// import Tab from './Tab.js'
+import Accordion from './Accordion/Accordion.js'
+import Tab from './Tab/Tab.js'
 import Suggest from './Suggest/Suggest.js'
 
 class App extends Component {
@@ -10,6 +10,8 @@ class App extends Component {
     return (
       <div className='App'>
         <Suggest />
+        <Accordion />
+        <Tab />
       </div>
     )
   }
