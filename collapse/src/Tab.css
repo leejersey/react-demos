@@ -1,0 +1,18 @@
+ul{
+  list-style:none;
+}
+.menus{
+}
+.menus .menu{
+  float:left;
+  margin-left:4px;
+}
+.menus .menu button{
+  padding:4px;
+}
+.menus ul.sub-menu{
+  background:#c1d2e3;
+}
+.menus ul li{
+  padding-left:4px;
+}

@@ -1,0 +1,29 @@
+
+.accordion{
+  background:#f00;
+  height:400px;
+}
+.accordion .div{
+  float:left;
+  width:100%;
+}
+.accordion .title{
+  background:#0f0;
+  height: 20px;
+  line-height:20px;
+  cursor:pointer;
+}
+.accordion .content{
+  transition:height 1s;
+  height:0;
+  background:#00f;
+  overflow:auto;
+}
+.accordion .content.full{
+  height:320px;
+}
+.accordion:after{
+  clear:both;
+  content:"";
+  display:block;
+}
