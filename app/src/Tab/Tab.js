@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
+import TabTitle from './TabTitle'
+
 import './Tab.css'
 
 class Tab extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      data: [
+      tabs: [
         {
           tabName: 'title1',
           tabCon: [
@@ -60,27 +62,19 @@ class Tab extends Component {
         }
       ]
     }
-
-    this.clkEvent = this.clkEvent.bind(this)
-  }
-  clkEvent () {
-    console.log('111')
   }
   render () {
     return (
-      <div>
-        <div className='menus'>
-          { this.state.data.map((el, index) => {
-            return (
-              <div className='menu' key={index}>
-                <button onClick={this.clkEvent}>{el.tabName}</button>
-              </div>
-            )
-          })}
+      <div className='tabs'>
+        <div className='tabs__header'>
+          <TabTitle
+            tabs={this.state.tabs}
+            onRemove={this._handleRemove}
+            onAdd={this._handleAdd}
+            onRename={this._handleRename}
+          />
         </div>
-        <div>
-            11111
-        </div>
+        <div className='tabs__content' />
       </div>
     )
   }
